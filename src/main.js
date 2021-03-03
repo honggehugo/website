@@ -3,8 +3,18 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-Vue.config.productionTip = false
+import mavonEditor from 'mavon-editor'
+import Element from 'element-ui'
+import "element-ui/lib/theme-chalk/index.css"
+import 'mavon-editor/dist/css/index.css'
+import axios from 'axios'
+import permission from './permission'
 
+import "./axios"
+Vue.use(Element)
+Vue.use(mavonEditor)
+Vue.config.productionTip = false
+Vue.prototype.$axios = axios
 new Vue({
   router,
   store,
